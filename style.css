@@ -1,6 +1,8 @@
 :root {
   --color-text: #141823;
   --color-background: #ffffff;
+  --color-text-dark: #ffffff;
+  --color-background-dark: #141823;
 }
 
 html,
@@ -10,12 +12,22 @@ body {
   font-family: "Playfair Display", serif;
 }
 
-/* Older browsers */
 html {
   font-size: 16px;
+}
+
+/* Older browsers */
+body {
   color: var(--color-text);
   background-color: var(--color-background);
 }
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    color: var(--color-text-dark);
+    background-color: var(--color-background-dark);
+  }
+} */
 
 /* Modern browsers only need this one */
 
@@ -46,12 +58,18 @@ div#bodycontainer {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 767px) {
+  div#bodycontainer {
+    padding: 0 1rem;
+  }
+}
+
 main {
   flex-grow: 1;
 }
 
 h1 {
-  font-family: "Abril Fatface";
+  font-family: "Amiri", serif;
 }
 
 header,
