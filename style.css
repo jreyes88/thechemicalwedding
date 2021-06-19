@@ -1,0 +1,61 @@
+:root {
+  --color-text: #141823;
+  --color-background: #ffffff;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Playfair Display", serif;
+}
+
+/* Older browsers */
+html {
+  font-size: 16px;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* Modern browsers only need this one */
+
+@media screen and (min-width: 25em) {
+  html {
+    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  }
+}
+
+/* Safari <8 and IE <11 */
+@media screen and (min-width: 25em) {
+  html {
+    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  }
+}
+@media screen and (min-width: 50em) {
+  html {
+    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  }
+}
+
+div#bodycontainer {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1 {
+  font-family: "Abril Fatface";
+}
+
+header,
+main,
+footer {
+  flex-shrink: 0;
+}
